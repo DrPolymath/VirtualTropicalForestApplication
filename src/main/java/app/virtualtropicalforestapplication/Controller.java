@@ -386,6 +386,7 @@ public class Controller implements Initializable {
         file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/snake-crawling.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
+        SnakeSwim.setImage(null);
         IVSnake.setImage(image);
     }
 
