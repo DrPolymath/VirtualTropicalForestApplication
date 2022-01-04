@@ -69,9 +69,12 @@ public class Controller implements Initializable {
     @FXML
     private ImageView WolfWalk;
 
+    @FXML
+    private ImageView DuckSwim;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
+        File file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
         String localUrl = null;
 
         try {
@@ -96,56 +99,56 @@ public class Controller implements Initializable {
 
         // Create tiger
         Animal tiger = mammals.chooseAnimal("tiger");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/tiger.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/tiger.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVTiger.setImage(image);
         tiger.display();
         // Create wolf
         Animal wolf = mammals.chooseAnimal("wolf");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/wolf.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/wolf.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVWolf.setImage(image);
         wolf.display();
         // Create eagle
         Animal eagle = birds.chooseAnimal("eagle");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/eagle.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/eagle.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVEagle.setImage(image);
         eagle.display();
         // Create frog
         Animal frog = amphibians.chooseAnimal("frog");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/frog.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/frog.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVFrog.setImage(image);
         frog.display();
         // Create snake
         Animal snake = reptiles.chooseAnimal("snake");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/snake.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/snake.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVSnake.setImage(image);
         snake.display();
         // Create monkey
         Animal monkey = mammals.chooseAnimal("monkey");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/monkey.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/monkey.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVMonkey.setImage(image);
         monkey.display();
         // Create squirrel
         Animal squirrel = mammals.chooseAnimal("squirrel");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/squirrel.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/squirrel.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVSquirrel.setImage(image);
         squirrel.display();
         // Create duck
         Animal duck = birds.chooseAnimal("duck");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/duck.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/duck.png");
         //file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/duck.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
@@ -153,14 +156,14 @@ public class Controller implements Initializable {
         duck.display();
         // Create crocodile
         Animal crocodile = reptiles.chooseAnimal("crocodile");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/crocodile.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/crocodile.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVCrocodile.setImage(image);
         crocodile.display();
         // Create owl
         Animal owl = birds.chooseAnimal("owl");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/owl.png");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/owl.png");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVOwl.setImage(image);
@@ -181,7 +184,7 @@ public class Controller implements Initializable {
         crocodile.setMoveBehavior(new Swim());
         crocodile.performMove("Crocodile");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/crocodile-swimming.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/crocodile-swimming.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVCrocodile.setImage(null);
@@ -201,7 +204,7 @@ public class Controller implements Initializable {
         crocodile.setMoveBehavior(new Walk());
         crocodile.performMove("Crocodile");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/crocodile-walking.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/crocodile-walking.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         CrocodileSwim.setImage(null);
@@ -221,11 +224,12 @@ public class Controller implements Initializable {
         duck.setMoveBehavior(new Swim());
         duck.performMove("Duck");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/duck-swimming.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/duck-swimming.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         DuckWalk.setImage(null);
-        IVDuck.setImage(image);
+        IVDuck.setImage(null);
+        DuckSwim.setImage(image);
 
     }
 
@@ -242,10 +246,11 @@ public class Controller implements Initializable {
         duck.setMoveBehavior(new Walk());
         duck.performMove("Duck");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/duck-walking.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/duck-walking.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVDuck.setImage(null);
+        DuckSwim.setImage(null);
         DuckWalk.setImage(image);
 
     }
@@ -263,7 +268,7 @@ public class Controller implements Initializable {
         eagle.setMoveBehavior(new Fly());
         eagle.performMove("Eagle");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/eagle-flying.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/eagle-flying.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVEagle.setImage(image);
@@ -301,7 +306,7 @@ public class Controller implements Initializable {
         frog.setMoveBehavior(new Jump());
         frog.performMove("Frog");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/frog-jumping.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/frog-jumping.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         FrogSwim.setImage(null);
@@ -320,7 +325,7 @@ public class Controller implements Initializable {
         Animal frog = amphibians.chooseAnimal("frog");
         frog.setMoveBehavior(new Swim());
         frog.performMove("Frog");
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/frog-swimming.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/frog-swimming.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVFrog.setImage(null);
@@ -340,7 +345,7 @@ public class Controller implements Initializable {
         monkey.setMoveBehavior(new Swing());
         monkey.performMove("Monkey");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/monkey-swinging.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/monkey-swinging.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVMonkey.setImage(image);
@@ -359,7 +364,7 @@ public class Controller implements Initializable {
         owl.setMoveBehavior(new Fly());
         owl.performMove("Owl");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/owl-flying.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/owl-flying.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVOwl.setImage(image);
@@ -378,7 +383,7 @@ public class Controller implements Initializable {
         snake.setMoveBehavior(new Crawl());
         snake.performMove("Snake");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/snake-crawling.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/snake-crawling.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVSnake.setImage(image);
@@ -397,7 +402,7 @@ public class Controller implements Initializable {
         snake.setMoveBehavior(new Swim());
         snake.performMove("Snake");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/snake-swimming.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/snake-swimming.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVSnake.setImage(null);
@@ -417,7 +422,7 @@ public class Controller implements Initializable {
         squirrel.setMoveBehavior(new Fly());
         squirrel.performMove("Squirrel");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/squirrel-flying.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/squirrel-flying.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         SquirrelWalk.setImage(null);
@@ -438,7 +443,7 @@ public class Controller implements Initializable {
         squirrel.setMoveBehavior(new Walk());
         squirrel.performMove("Squirrel");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/squirrel-walking.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/squirrel-walking.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVSquirrel.setImage(null);
@@ -459,7 +464,7 @@ public class Controller implements Initializable {
         tiger.setMoveBehavior(new Walk());
         tiger.performMove("Tiger");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/tiger-walking.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/tiger-walking.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVTiger.setImage(image);
@@ -478,7 +483,7 @@ public class Controller implements Initializable {
         wolf.setMoveBehavior(new Walk());
         wolf.performMove("Wolf");
 
-        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/movement/wolf-walking.gif");
+        file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/movement/wolf-walking.gif");
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVWolf.setImage(null);

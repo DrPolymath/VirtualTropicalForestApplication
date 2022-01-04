@@ -22,10 +22,18 @@
                <ImageView fx:id="IVFrog" fitHeight="33.0" fitWidth="53.0" layoutX="56.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="IVSnake" fitHeight="56.0" fitWidth="182.0" layoutX="452.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="IVCrocodile" fitHeight="192.0" fitWidth="273.0" layoutX="224.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" />
-               <ImageView fx:id="IVDuck" fitHeight="56.0" fitWidth="83.0" layoutX="140.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="IVDuck" fitHeight="56.0" fitWidth="83.0" layoutX="154.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="IVOwl" fitHeight="65.0" fitWidth="83.0" layoutX="624.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="IVMonkey" fitHeight="104.0" fitWidth="130.0" layoutX="158.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="IVSquirrel" fitHeight="48.0" fitWidth="63.0" layoutX="660.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="CrocodileSwim" fitHeight="140.0" fitWidth="182.0" layoutX="-54.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="DuckWalk" fitHeight="79.0" fitWidth="118.0" layoutX="565.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="FrogSwim" fitHeight="48.0" fitWidth="56.0" layoutX="14.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="SnakeSwim" fitHeight="56.0" fitWidth="81.0" layoutX="96.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="SquirrelWalk" fitHeight="65.0" fitWidth="72.0" layoutX="691.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="SquirrelFly" fitHeight="56.0" fitWidth="73.0" layoutX="572.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="WolfWalk" fitHeight="172.0" fitWidth="230.0" layoutX="128.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="DuckSwim" fitHeight="110.0" fitWidth="162.0" layoutX="80.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" />
             </children>
          </Pane>
       </children>
@@ -33,6 +41,21 @@
    <Pane prefHeight="200.0" prefWidth="200.0">
       <children>
           <Button layoutX="27.0" layoutY="21.0" onAction="#onCreateAnimals" text="Create Animals" />
+         <Button layoutX="129.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileSwim" text="Crocodile-Swim" />
+         <Button layoutX="236.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileWalk" text="Crocodile-Walk" />
+         <Button layoutX="424.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDuckWalk" text="Duck-Walk" />
+         <Button layoutX="341.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDuckSwim" text="Duck-Swim" />
+         <Button layoutX="506.0" layoutY="21.0" mnemonicParsing="false" onAction="#onEagleFly" text="Eagle-Fly" />
+         <Button layoutX="577.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFrogJump" text="Frog-Jump" />
+         <Button layoutX="659.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFrogSwim" text="Frog-Swim" />
+         <Button layoutX="740.0" layoutY="21.0" mnemonicParsing="false" onAction="#onMonkeySwing" text="Monkey-Swing" />
+         <Button layoutX="779.0" layoutY="52.0" mnemonicParsing="false" onAction="#onOwlFly" text="Owl-Fly" />
+         <Button layoutX="691.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSnakeCrawl" text="Snake-Crawl" />
+         <Button layoutX="603.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSnakeSwim" text="Snake-Swim" />
+         <Button layoutX="518.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSquirrelFly" text="Squirrel-Fly" />
+         <Button layoutX="424.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSquirrelWalk" text="Squirrel-Walk" />
+         <Button layoutX="342.0" layoutY="52.0" mnemonicParsing="false" onAction="#onTigerWalk" text="TIger-Walk" />
+         <Button layoutX="261.0" layoutY="52.0" mnemonicParsing="false" onAction="#onWolfWalk" text="Wolf-Walk" />
       </children>
    </Pane>
 </VBox>
