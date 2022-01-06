@@ -72,6 +72,9 @@ public class Controller implements Initializable {
     @FXML
     private ImageView DuckSwim;
 
+    @FXML
+    private ImageView FrogJump;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
@@ -310,7 +313,8 @@ public class Controller implements Initializable {
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         FrogSwim.setImage(null);
-        IVFrog.setImage(image);
+        IVFrog.setImage(null);
+        FrogJump.setImage(image);
     }
 
     @FXML
@@ -329,6 +333,7 @@ public class Controller implements Initializable {
         localUrl = file.toURI().toURL().toString();
         image = new Image(localUrl);
         IVFrog.setImage(null);
+        FrogJump.setImage(null);
         FrogSwim.setImage(image);
     }
 
