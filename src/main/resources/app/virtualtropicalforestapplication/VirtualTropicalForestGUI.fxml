@@ -14,6 +14,7 @@
    <StackPane prefHeight="375.0" prefWidth="818.0">
       <children>
          <ImageView fx:id="IVForest" fitHeight="519.0" fitWidth="857.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="IVForestNight" fitHeight="519.0" fitWidth="857.0" pickOnBounds="true" preserveRatio="true" />
          <Pane prefHeight="200.0" prefWidth="200.0">
             <children>
                <ImageView fx:id="IVTiger" fitHeight="150.0" fitWidth="200.0" layoutX="411.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" x="80.0" y="20.0" />
@@ -41,7 +42,8 @@
    </StackPane>
    <Pane prefHeight="200.0" prefWidth="200.0">
       <children>
-          <Button layoutX="27.0" layoutY="21.0" onAction="#onCreateAnimals" text="Create Animals" />
+         <Button layoutX="27.0" layoutY="21.0" onAction="#onCreateAnimals" text="Create Animals" />
+         <Button layoutX="27.0" layoutY="52.0" onAction="#onDayNight" text="Change Day and Night" />
          <Button layoutX="129.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileSwim" text="Crocodile-Swim" />
          <Button layoutX="236.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileWalk" text="Crocodile-Walk" />
          <Button layoutX="424.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDuckWalk" text="Duck-Walk" />
