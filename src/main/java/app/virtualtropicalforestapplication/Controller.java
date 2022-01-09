@@ -26,6 +26,9 @@ public class Controller implements Initializable {
 
     @FXML
     private ImageView IVForest;
+    
+    @FXML
+    private ImageView IVForestNight;
 
     @FXML
     private ImageView IVFrog;
@@ -74,11 +77,15 @@ public class Controller implements Initializable {
 
     @FXML
     private ImageView FrogJump;
+    
+    Context context = new Context();
+    StartDay startDay = new StartDay();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
         String localUrl = null;
+        startDay.change(context);
 
         try {
             localUrl = file.toURI().toURL().toString();
@@ -172,6 +179,30 @@ public class Controller implements Initializable {
         IVOwl.setImage(image);
         owl.display();
 
+    }
+    
+    @FXML
+    void onDayNight(ActionEvent event) throws MalformedURLException{
+        String localUrl = null;
+        File file = null;
+        Image image = null;
+
+        if(context.getState().getClass().getSimpleName().equals("StartDay")){
+            StartNight startNight = new StartNight();
+            startNight.change(context);
+            file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest-night.jpg");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVForest.setImage(null);
+            IVForestNight.setImage(image);
+        }else if(context.getState().getClass().getSimpleName().equals("StartNight")){
+            startDay.change(context);
+            file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVForestNight.setImage(null);
+            IVForest.setImage(image);
+        }
     }
 
     @FXML
