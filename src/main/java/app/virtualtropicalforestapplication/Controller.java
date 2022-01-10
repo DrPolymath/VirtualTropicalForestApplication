@@ -14,6 +14,21 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+    
+    @FXML
+    private ImageView IVRaining;
+
+    @FXML
+    private ImageView IVWind1;
+
+    @FXML
+    private ImageView IVWind2;
+
+    @FXML
+    private ImageView IVLightning1;
+
+    @FXML
+    private ImageView IVLightning2;
 
     @FXML
     private ImageView IVCrocodile;
@@ -78,14 +93,36 @@ public class Controller implements Initializable {
     @FXML
     private ImageView FrogJump;
     
+    @FXML
+    private CheckBox box1;
+
+    @FXML
+    private CheckBox box2;
+
+    @FXML
+    private CheckBox box3;
+
+    @FXML
+    private Button Box1;
+    
     Context context = new Context();
     StartDay startDay = new StartDay();
+    
+    Weather Raining = new Raining();
+    Weather HeavyRaining = new HeavyRaining();
+
+    String checkRainType = "";
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File file = new File("D:/Education/DesignPatterns/VirtualTropicalForestApplication/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
         String localUrl = null;
         startDay.change(context);
+        
+        //weather
+        box1.setDisable(true);
+        box2.setDisable(true);
+        box3.setDisable(true);
 
         try {
             localUrl = file.toURI().toURL().toString();
@@ -178,6 +215,8 @@ public class Controller implements Initializable {
         image = new Image(localUrl);
         IVOwl.setImage(image);
         owl.display();
+        
+        Box1.setDisable(true);
 
     }
     
@@ -203,6 +242,255 @@ public class Controller implements Initializable {
             IVForestNight.setImage(null);
             IVForest.setImage(image);
         }
+    }
+    
+    @FXML
+    void onRaining(ActionEvent event) throws MalformedURLException{
+        checkRainType = "Raining";
+
+        box1.setDisable(false);
+        box2.setDisable(false);
+        box3.setDisable(false);
+
+        Raining = new Raining();
+
+        IVRaining.setImage(null);
+        IVWind1.setImage(null);
+        IVWind2.setImage(null);
+        IVLightning1.setImage(null);
+        IVLightning2.setImage(null);
+
+        box1.setSelected(false);
+        box2.setSelected(false);
+        box3.setSelected(false);
+
+        String localUrl = null;
+        File file = null;
+        Image image = null;
+
+        file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/hujan rintik.gif");
+        localUrl = file.toURI().toURL().toString();
+        image = new Image(localUrl);
+        IVRaining.setImage(image);
+
+        System.out.println(Raining.getDesc());
+
+    }
+
+    @FXML
+    void onHeavyRaining(ActionEvent event) throws MalformedURLException{
+        checkRainType = "Heavy Raining";
+
+        box1.setDisable(false);
+        box2.setDisable(false);
+        box3.setDisable(false);
+
+        HeavyRaining = new HeavyRaining();
+
+        IVRaining.setImage(null);
+        IVWind1.setImage(null);
+        IVWind2.setImage(null);
+        IVLightning1.setImage(null);
+        IVLightning2.setImage(null);
+
+        box1.setSelected(false);
+        box2.setSelected(false);
+        box3.setSelected(false);
+
+        String localUrl = null;
+        File file = null;
+        Image image = null;
+
+        file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/hujan.gif");
+        localUrl = file.toURI().toURL().toString();
+        image = new Image(localUrl);
+        IVRaining.setImage(image);
+
+        System.out.println(HeavyRaining.getDesc());
+    }
+
+    @FXML
+    void onWindy(ActionEvent event) throws MalformedURLException{
+
+        if(checkRainType == "Raining" && box1.isSelected()){
+
+            Raining = new Windy(Raining);
+
+            String localUrl = null;
+            File file = null;
+            Image image = null;
+
+            file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/wind.gif");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVWind1.setImage(image);
+
+            String localUrl2 = null;
+            File file2 = null;
+            Image image2 = null;
+
+            file2 = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/wind2.gif");
+            localUrl2 = file2.toURI().toURL().toString();
+            image2 = new Image(localUrl2);
+            IVWind2.setImage(image2);
+
+            System.out.println(Raining.getDesc());
+
+            box1.setDisable(true);
+
+        }
+
+        else if(checkRainType == "Heavy Raining" && box1.isSelected()){
+
+            HeavyRaining = new Windy(HeavyRaining);
+
+            String localUrl = null;
+            File file = null;
+            Image image = null;
+
+            file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/wind.gif");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVWind1.setImage(image);
+
+            String localUrl2 = null;
+            File file2 = null;
+            Image image2 = null;
+
+            file2 = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/wind2.gif");
+            localUrl2 = file2.toURI().toURL().toString();
+            image2 = new Image(localUrl2);
+            IVWind2.setImage(image2);
+
+            System.out.println(HeavyRaining.getDesc());
+
+            box1.setDisable(true);
+
+        }
+
+    }
+
+    @FXML
+    void onThunder(ActionEvent event) throws MalformedURLException{
+
+        if(checkRainType == "Raining" && box2.isSelected()) {
+
+            Raining = new Thunder(Raining);
+
+            String musicFile = "Thunder Sound Effect.mp3";
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+
+            System.out.println(Raining.getDesc());
+
+            box2.setDisable(true);
+
+        }
+
+        else if(checkRainType == "Heavy Raining" && box2.isSelected() ){
+
+            HeavyRaining = new Thunder(HeavyRaining);
+
+            String musicFile = "Thunder Sound Effect.mp3";
+            Media sound = new Media(new File(musicFile).toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+
+            System.out.println(HeavyRaining.getDesc());
+
+            box2.setDisable(true);
+
+        }
+
+
+
+    }
+
+    @FXML
+    void onLightning(ActionEvent event) throws MalformedURLException{
+
+        if(checkRainType == "Raining" && box3.isSelected()) {
+
+            Raining = new Lightning(Raining);
+
+            String localUrl = null;
+            File file = null;
+            Image image = null;
+
+            file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/petir.gif");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVLightning1.setImage(image);
+
+            String localUrl2 = null;
+            File file2 = null;
+            Image image2 = null;
+
+            file2 = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/petir 2.gif");
+            localUrl2 = file2.toURI().toURL().toString();
+            image2 = new Image(localUrl2);
+            IVLightning2.setImage(image2);
+
+            System.out.println(Raining.getDesc());
+
+            box3.setDisable(true);
+
+        }
+
+        else if(checkRainType == "Heavy Raining" && box3.isSelected() ){
+
+            HeavyRaining = new Lightning(HeavyRaining);
+
+            String localUrl = null;
+            File file = null;
+            Image image = null;
+
+            file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/petir.gif");
+            localUrl = file.toURI().toURL().toString();
+            image = new Image(localUrl);
+            IVLightning1.setImage(image);
+
+            String localUrl2 = null;
+            File file2 = null;
+            Image image2 = null;
+
+            file2 = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/weather/petir 2.gif");
+            localUrl2 = file2.toURI().toURL().toString();
+            image2 = new Image(localUrl2);
+            IVLightning2.setImage(image2);
+
+            System.out.println(HeavyRaining.getDesc());
+
+            box3.setDisable(true);
+
+        }
+
+
+    }
+
+    @FXML
+    void onStopRaining(ActionEvent event) throws MalformedURLException{
+        checkRainType = "";
+
+        box1.setDisable(true);
+        box2.setDisable(true);
+        box3.setDisable(true);
+
+        IVRaining.setImage(null);
+        IVWind1.setImage(null);
+        IVWind2.setImage(null);
+        IVLightning1.setImage(null);
+        IVLightning2.setImage(null);
+
+        box1.setSelected(false);
+        box2.setSelected(false);
+        box3.setSelected(false);
+
+        Raining = new Raining();
+        HeavyRaining = new HeavyRaining();
+
+        System.out.println("Stop Raining");
     }
 
     @FXML
