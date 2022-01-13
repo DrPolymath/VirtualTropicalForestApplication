@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="670.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.virtualtropicalforestapplication.Controller">
+<VBox alignment="TOP_CENTER" prefHeight="804.0" prefWidth="899.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.virtualtropicalforestapplication.Controller">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -38,32 +38,42 @@
                <ImageView fx:id="WolfWalk" fitHeight="172.0" fitWidth="230.0" layoutX="128.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="DuckSwim" fitHeight="110.0" fitWidth="162.0" layoutX="80.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" />
                <ImageView fx:id="FrogJump" fitHeight="65.0" fitWidth="72.0" layoutX="54.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
-
-               <Pane layoutX="-14.0" layoutY="496.0" prefHeight="140.0" prefWidth="860.0">
+            
+                                                                                                   <Pane layoutX="-14.0" layoutY="496.0" prefHeight="251.0" prefWidth="860.0">
                   <children>
-                     <Button fx:id="Box1" layoutX="27.0" layoutY="21.0" onAction="#onCreateAnimals" text="Create Animals" />
-                     <Button layoutX="27.0" layoutY="52.0" onAction="#onDayNight" text="Change Day and Night" />
-                     <Button layoutX="129.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileSwim" text="Crocodile-Swim" />
-                     <Button layoutX="236.0" layoutY="21.0" mnemonicParsing="false" onAction="#onCrocodileWalk" text="Crocodile-Walk" />
-                     <Button layoutX="424.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDuckWalk" text="Duck-Walk" />
-                     <Button layoutX="341.0" layoutY="21.0" mnemonicParsing="false" onAction="#onDuckSwim" text="Duck-Swim" />
-                     <Button layoutX="506.0" layoutY="21.0" mnemonicParsing="false" onAction="#onEagleFly" text="Eagle-Fly" />
-                     <Button layoutX="577.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFrogJump" text="Frog-Jump" />
-                     <Button layoutX="659.0" layoutY="21.0" mnemonicParsing="false" onAction="#onFrogSwim" text="Frog-Swim" />
-                     <Button layoutX="740.0" layoutY="21.0" mnemonicParsing="false" onAction="#onMonkeySwing" text="Monkey-Swing" />
-                     <Button layoutX="779.0" layoutY="52.0" mnemonicParsing="false" onAction="#onOwlFly" text="Owl-Fly" />
-                     <Button layoutX="691.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSnakeCrawl" text="Snake-Crawl" />
-                     <Button layoutX="603.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSnakeSwim" text="Snake-Swim" />
-                     <Button layoutX="518.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSquirrelFly" text="Squirrel-Fly" />
-                     <Button layoutX="424.0" layoutY="52.0" mnemonicParsing="false" onAction="#onSquirrelWalk" text="Squirrel-Walk" />
-                     <Button layoutX="342.0" layoutY="52.0" mnemonicParsing="false" onAction="#onTigerWalk" text="TIger-Walk" />
-                     <Button layoutX="261.0" layoutY="52.0" mnemonicParsing="false" onAction="#onWolfWalk" text="Wolf-Walk" />
-                     <Button layoutX="27.0" layoutY="83" mnemonicParsing="false" onAction="#onRaining" text="Raining" />
-                     <Button layoutX="90.0" layoutY="83" mnemonicParsing="false" onAction="#onHeavyRaining" text="Heavy Raining" />
-                     <Button layoutX="186.0" layoutY="83" mnemonicParsing="false" onAction="#onStopRaining" text="Stop Raining" />
-                     <CheckBox fx:id="box1" layoutX="27.0" layoutY="116.0" mnemonicParsing="false" onAction="#onWindy" text="Windy" />
-                     <CheckBox fx:id="box2" layoutX="89.0" layoutY="116.0" mnemonicParsing="false" onAction="#onThunder" text="Thunder" />
-                     <CheckBox fx:id="box3" layoutX="163.0" layoutY="116.0" mnemonicParsing="false" onAction="#onLightning" text="Lightning" />
+                     <Button fx:id="btnCreateAnimals" layoutX="183.0" layoutY="171.0" onAction="#onCreateAnimals" text="Create Animals" />
+                     <Button fx:id="btnChangeDayNight" layoutX="29.0" layoutY="171.0" onAction="#onDayNight" text="Change Day and Night" />
+                     <Button fx:id="btnCrocodileSwim" layoutX="129.0" layoutY="40.0" mnemonicParsing="false" onAction="#onCrocodileSwim" text="Crocodile-Swim" />
+                     <Button fx:id="btnCrocodileWalk" layoutX="25.0" layoutY="40.0" mnemonicParsing="false" onAction="#onCrocodileWalk" text="Crocodile-Walk" />
+                     <Button fx:id="btnDuckWalk" layoutX="464.0" layoutY="41.0" mnemonicParsing="false" onAction="#onDuckWalk" prefHeight="25.0" prefWidth="76.0" text="Duck-Walk" />
+                     <Button fx:id="btnDuckSwim" layoutX="368.0" layoutY="41.0" mnemonicParsing="false" onAction="#onDuckSwim" prefHeight="25.0" prefWidth="88.0" text="Duck-Swim" />
+                     <Button fx:id="btnEagleFly" layoutX="671.0" layoutY="40.0" mnemonicParsing="false" onAction="#onEagleFly" prefHeight="25.0" prefWidth="81.0" text="Eagle-Fly" />
+                     <Button fx:id="btnFrogJump" layoutX="27.0" layoutY="113.0" mnemonicParsing="false" onAction="#onFrogJump" prefHeight="25.0" prefWidth="95.0" text="Frog-Jump" />
+                     <Button fx:id="btnFrogSwim" layoutX="129.0" layoutY="113.0" mnemonicParsing="false" onAction="#onFrogSwim" prefHeight="25.0" prefWidth="99.0" text="Frog-Swim" />
+                     <Button fx:id="btnMonkeySwing" layoutX="368.0" layoutY="114.0" mnemonicParsing="false" onAction="#onMonkeySwing" prefHeight="25.0" prefWidth="136.0" text="Monkey-Swing" />
+                     <Button fx:id="btnOwlFly" layoutX="670.0" layoutY="146.0" mnemonicParsing="false" onAction="#onOwlFly" prefHeight="25.0" prefWidth="84.0" text="Owl-Fly" />
+                     <Button fx:id="btnSnakeCrawl" layoutX="129.0" layoutY="77.0" mnemonicParsing="false" onAction="#onSnakeCrawl" prefHeight="25.0" prefWidth="99.0" text="Snake-Crawl" />
+                     <Button fx:id="btnSnakeSwim" layoutX="27.0" layoutY="77.0" mnemonicParsing="false" onAction="#onSnakeSwim" prefHeight="25.0" prefWidth="95.0" text="Snake-Swim" />
+                     <Button fx:id="btnSquirrelFly" layoutX="465.0" layoutY="78.0" mnemonicParsing="false" onAction="#onSquirrelFly" text="Squirrel-Fly" />
+                     <Button fx:id="btnSquirrelWalk" layoutX="368.0" layoutY="78.0" mnemonicParsing="false" onAction="#onSquirrelWalk" text="Squirrel-Walk" />
+                     <Button fx:id="btnTigerWalk" layoutX="670.0" layoutY="113.0" mnemonicParsing="false" onAction="#onTigerWalk" prefHeight="25.0" prefWidth="84.0" text="Tiger-Walk" />
+                     <Button fx:id="btnWolfWalk" layoutX="670.0" layoutY="77.0" mnemonicParsing="false" onAction="#onWolfWalk" prefHeight="25.0" prefWidth="84.0" text="Wolf-Walk" />
+                     <Button fx:id="btnRaining" layoutX="27.0" layoutY="204.0" mnemonicParsing="false" onAction="#onRaining" text="Raining" />
+                     <Button fx:id="btnHeavyRaining" layoutX="90.0" layoutY="204.0" mnemonicParsing="false" onAction="#onHeavyRaining" text="Heavy Raining" />
+                     <Button fx:id="btnStopRaining" layoutX="186.0" layoutY="204.0" mnemonicParsing="false" onAction="#onStopRaining" text="Stop Raining" />
+                     <CheckBox fx:id="box1" layoutX="27.0" layoutY="240.0" mnemonicParsing="false" onAction="#onWindy" text="Windy" />
+                     <CheckBox fx:id="box2" layoutX="89.0" layoutY="240.0" mnemonicParsing="false" onAction="#onThunder" text="Thunder" />
+                     <CheckBox fx:id="box3" layoutX="163.0" layoutY="240.0" mnemonicParsing="false" onAction="#onLightning" text="Lightning" />
+                     <Button fx:id="btnOwlStop" layoutX="762.0" layoutY="146.0" mnemonicParsing="false" onAction="#onOwlStop" prefHeight="25.0" prefWidth="81.0" text="Owl-Stop" />
+                     <Button fx:id="btnSnakeStop" layoutX="240.0" layoutY="77.0" mnemonicParsing="false" onAction="#onSnakeStop" prefHeight="25.0" prefWidth="95.0" text="Snake-Stop" />
+                     <Button fx:id="btnSquirrelStop" layoutX="550.0" layoutY="78.0" mnemonicParsing="false" onAction="#onSquirrelStop" text="Squirrel-Stop" />
+                     <Button fx:id="btnTigerStop" layoutX="762.0" layoutY="113.0" mnemonicParsing="false" onAction="#onTigerStop" prefHeight="25.0" prefWidth="81.0" text="Tiger-Stop" />
+                     <Button fx:id="btnWolfStop" layoutX="759.0" layoutY="77.0" mnemonicParsing="false" onAction="#onWolfStop" prefHeight="25.0" prefWidth="81.0" text="Wolf-Stop" />
+                     <Button fx:id="btnMonkeyStop" layoutX="507.0" layoutY="114.0" mnemonicParsing="false" onAction="#onMonkeyStop" prefHeight="25.0" prefWidth="130.0" text="Monkey-Stop" />
+                     <Button fx:id="btnFrogStop" layoutX="238.0" layoutY="113.0" mnemonicParsing="false" onAction="#onFrogStop" prefHeight="25.0" prefWidth="96.0" text="Frog-Stop" />
+                     <Button fx:id="btnEagleStop" layoutX="759.0" layoutY="40.0" mnemonicParsing="false" onAction="#onEagleStop" prefHeight="25.0" prefWidth="81.0" text="Eagle-Stop" />
+                     <Button fx:id="btnDuckStop" layoutX="548.0" layoutY="41.0" mnemonicParsing="false" onAction="#onDuckStop" prefHeight="25.0" prefWidth="86.0" text="Duck-Stop" />
+                     <Button fx:id="btnCrocodileStop" layoutX="239.0" layoutY="40.0" mnemonicParsing="false" onAction="#onCrocodileStop" text="Crocodile-Stop" />
                   </children>
                </Pane>
                <ImageView fx:id="IVWind1" fitHeight="203.0" fitWidth="213.0" layoutX="154.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true" />

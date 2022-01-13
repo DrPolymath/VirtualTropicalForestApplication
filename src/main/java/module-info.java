@@ -9,6 +9,7 @@ module app.virtualtropicalforestapplication {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires javafx.media;
 
     opens app.virtualtropicalforestapplication to javafx.fxml;
     exports app.virtualtropicalforestapplication;

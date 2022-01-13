@@ -1,6 +1,6 @@
 package app.virtualtropicalforestapplication;
 
-public class Thunder extends WeatherDecorator {
+public class  Thunder extends WeatherDecorator {
 
     Weather weather;
 
