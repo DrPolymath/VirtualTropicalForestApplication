@@ -8,7 +8,7 @@ public class StartDay implements State{
     }
     
     @Override
-    public void change(Context context) {
+    public void change() {
         System.out.println("Forest at day.");
         context.setState(this);
     }
