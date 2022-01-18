@@ -1,10 +1,13 @@
 package app.virtualtropicalforestapplication;
 
 public class Context {
+    public State day;
+    public State night;
     public State state;
 
-    public Context() {
-        state = null;
+    public Context(State state){
+        day = new StartDay(this);
+        night = new StartNight(this);
     }
 
     public void setState(State state){
