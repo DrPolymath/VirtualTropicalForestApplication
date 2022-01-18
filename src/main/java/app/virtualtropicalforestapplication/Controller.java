@@ -68,6 +68,9 @@ public class Controller implements Initializable {
     
     @FXML
     private ImageView IVForestNight;
+    
+    private State state;
+    Context context = new Context(state);
 
     @FXML
     private ImageView IVFrog;
@@ -187,8 +190,8 @@ public class Controller implements Initializable {
     @FXML
     private Button btnCrocodileStop;
 
-    Context context;
-    StartDay startDay;
+//     Context context;
+//     StartDay startDay;
     Weather Raining;
     Weather HeavyRaining;
     String checkRainType;
@@ -216,6 +219,7 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
         String localUrl = null;
+        context.day.change();
 
         try {
             localUrl = file.toURI().toURL().toString();
@@ -458,14 +462,14 @@ public class Controller implements Initializable {
         Image image = null;
 
         if(context.getState().getClass().getSimpleName().equals("StartDay")){
-            startNight.change(context);
+            context.night.change();
             file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/forest-night.jpg");
             localUrl = file.toURI().toURL().toString();
             image = new Image(localUrl);
             IVForest.setImage(null);
             IVForestNight.setImage(image);
         }else if(context.getState().getClass().getSimpleName().equals("StartNight")){
-            startDay.change(context);
+            context.day.change();
             file = new File("C:/Users/ILLEGEAR/Desktop/VirtualTropicalForestApplication-master/src/main/java/app/virtualtropicalforestapplication/images/forest.jpg");
             localUrl = file.toURI().toURL().toString();
             image = new Image(localUrl);
