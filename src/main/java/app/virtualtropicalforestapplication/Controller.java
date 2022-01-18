@@ -190,8 +190,6 @@ public class Controller implements Initializable {
     @FXML
     private Button btnCrocodileStop;
 
-//     Context context;
-//     StartDay startDay;
     Weather Raining;
     Weather HeavyRaining;
     String checkRainType;
@@ -234,11 +232,7 @@ public class Controller implements Initializable {
         box3.setDisable(true);
 
         resetButton();
-
-        context = new Context();
-        startDay = new StartDay();
-        startDay.change(context);
-        startNight = new StartNight();
+        
         checkRainType="";
         Raining = new Raining();
         HeavyRaining = new HeavyRaining();
